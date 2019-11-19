@@ -9,4 +9,4 @@ steps:
 
 images:
 
-- gcr.io/$PROJECT_IDgce-angular
+- gcr.io/$PROJECT_ID/gce-angular
