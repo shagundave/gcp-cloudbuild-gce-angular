@@ -1,12 +1,12 @@
 steps:
 
 - name: gcr.io/cloud-builders/docker
-  args: [ build, -t, gcr.io/$PROJECT_ID/gcp-cloudbuild-gce-angular, . ]
+  args: [ build, -t, gcr.io/$PROJECT_ID/gce-angular, . ]
 
 - name: gcr.io/cloud-builders/gcloud
-  args: [ compute, instance-groups, managed, rolling-action, restart, gce-angular-instance-group, --zone=us-east1-b ]
+  args: [ compute, instance-groups, managed, rolling-action, restart, automate-build, --zone=us-central1-a ]
 
 
 images:
 
-- gcr.io/$PROJECT_ID/gcp-cloudbuild-gce-angular
+- gcr.io/$PROJECT_IDgce-angular
